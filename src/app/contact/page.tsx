@@ -128,9 +128,9 @@ export default function ContactPage() {
                 <div className="flex gap-4 text-sm font-semibold">
                   <a href="https://github.com/ishmaelharrydeckor" target="_blank" rel="noreferrer" className="text-foreground hover:text-accent transition-colors">GitHub</a>
                   <span className="text-zinc-800">/</span>
-                  <a href="#" className="text-foreground hover:text-accent transition-colors">LinkedIn</a>
+                  <a href="https://www.linkedin.com/in/ishmaelharrydeckor" target="_blank" rel="noreferrer" className="text-foreground hover:text-accent transition-colors">LinkedIn</a>
                   <span className="text-zinc-800">/</span>
-                  <a href="#" className="text-foreground hover:text-accent transition-colors">Twitter</a>
+                  <a href="https://x.com/DeckorHarry" target="_blank" rel="noreferrer" className="text-foreground hover:text-accent transition-colors">Twitter</a>
                 </div>
               </div>
             </div>

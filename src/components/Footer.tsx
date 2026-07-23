@@ -10,8 +10,8 @@ export default function Footer() {
 
   const socialLinks = [
     { name: "GitHub", href: "https://github.com/ishmaelharrydeckor", handle: "@ishmaelharrydeckor" },
-    { name: "LinkedIn", href: "#", handle: "Ishmael Harry-Deckor" },
-    { name: "Twitter", href: "#", handle: "@ishmael_hd" },
+    { name: "LinkedIn", href: "https://www.linkedin.com/in/ishmaelharrydeckor", handle: "@ishmaelharrydeckor" },
+    { name: "Twitter", href: "https://x.com/DeckorHarry", handle: "@DeckorHarry" },
     { name: "Email", href: "mailto:ishmaelharrydeckor@gmail.com", handle: "ishmaelharrydeckor@gmail.com" },
   ];
 

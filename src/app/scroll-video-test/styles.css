@@ -1,0 +1,226 @@
+/* Vanilla CSS for Scroll Video scrubbing page */
+
+.page-container {
+  background-color: #09090b;
+  color: #f4f4f5;
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.intro-section, .outro-section {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+.intro-section h1 {
+  font-family: var(--font-outfit), sans-serif;
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+
+.intro-section p, .outro-section p {
+  font-size: 1.1rem;
+  color: #a1a1aa;
+  max-width: 600px;
+  line-height: 1.6;
+}
+
+.scroll-indicator {
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  color: #71717a;
+}
+
+.arrow-down {
+  width: 24px;
+  height: 24px;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-8px);
+  }
+  60% {
+    transform: translateY(-4px);
+  }
+}
+
+/* Scrub Container */
+.scrub-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000000;
+}
+
+.video-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.scrub-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Overlay elements */
+.overlay-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none; /* Let user scroll through the overlay */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-overlay {
+  position: absolute;
+  max-width: 600px;
+  padding: 2.5rem;
+  border-radius: 16px;
+  background: rgba(9, 9, 11, 0.65);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  text-align: center;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+/* The first card is initially visible */
+.text-overlay-1 {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.text-overlay h2 {
+  font-family: var(--font-outfit), sans-serif;
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  margin: 0 0 0.75rem 0;
+  color: #ffffff;
+}
+
+.text-overlay p {
+  font-size: 1.05rem;
+  color: #d4d4d8;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Loading State */
+.loading-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #09090b;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 3px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  border-top-color: #ffffff;
+  animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.loading-text {
+  font-family: var(--font-outfit), sans-serif;
+  font-size: 1.2rem;
+  color: #e4e4e7;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+}
+
+.error-text {
+  color: #ef4444;
+  font-weight: 600;
+}
+
+/* Outro Section Details */
+.outro-section h2 {
+  font-family: var(--font-outfit), sans-serif;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+
+.outro-section p {
+  margin-bottom: 2rem;
+}
+
+.back-btn {
+  font-family: var(--font-outfit), sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #09090b;
+  background-color: #ffffff;
+  border: none;
+  padding: 0.75rem 2rem;
+  border-radius: 9999px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 14px rgba(255, 255, 255, 0.15);
+}
+
+.back-btn:hover {
+  background-color: #e4e4e7;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.25);
+}
+
+.back-btn:active {
+  transform: translateY(0);
+}

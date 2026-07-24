@@ -46,23 +46,32 @@ export default function AboutPage() {
                 Ishmael Harry-Deckor
               </h1>
               <p className="mt-2 text-sm font-semibold text-accent uppercase tracking-wider">
-                AI-Accelerated Frontend Builder
+                AI Product Builder • Founder, Sena Academy
               </p>
             </div>
 
             {/* Verbatim Bio Paragraphs */}
             <div className="font-sans text-base text-foreground-muted leading-relaxed space-y-6">
               <p>
-                I'm Ishmael Harry-Deckor. I build fast, premium websites by combining serious technical training with AI as a genuine engineering tool — not a shortcut, and not a gimmick.
+                I'm Ishmael Harry-Deckor, a software developer and the founder of Sena Academy, where we're helping the next generation of builders learn AI and software development by creating real projects—not just watching tutorials.
               </p>
               <p>
-                My foundation is deliberate: certified training in prompt engineering, machine learning, and the OpenAI API gives me real command over the tools I use daily, not surface-level familiarity. A 24-hour deep dive into Python and hands-on experience with AI applied to real business problems — during an internship with Erudite Africa Network — mean I understand the systems behind the sites I build, not just the visual layer.
+                I build modern, high-performance web applications that combine thoughtful design with AI-powered development workflows. To me, AI isn't a shortcut—it's a productivity multiplier that allows me to build faster while maintaining quality.
               </p>
               <p>
-                I pair that technical foundation with design craft — including a full Photoshop masterclass — so every site I ship looks as sharp as it performs. And because I lead membership growth for SPE KNUST and co-founded Echelon Networking's operations arm, I know how to communicate clearly, manage a project end-to-end, and deliver on time, every time.
+                My experience spans frontend development, prompt engineering, machine learning fundamentals, and practical AI implementation. Through my internship at Erudite Africa Network, I applied AI to solve real business problems, giving me a deeper understanding of how technology creates value beyond writing code.
+              </p>
+              <p>
+                Alongside building products, I'm passionate about helping others become builders. Through Sena Academy, I'm creating a community where students, professionals, and aspiring developers gain practical experience by shipping projects, building portfolios, and preparing for opportunities in today's AI-driven world.
+              </p>
+              <p>
+                Whether I'm designing interfaces, building products, or mentoring future developers, my goal remains the same:
+              </p>
+              <p className="font-bold text-foreground">
+                Build technology that solves real problems—and empower others to do the same.
               </p>
               <p className="border-l-2 border-accent pl-4 text-foreground/90 font-medium italic">
-                "The result: you get a website that looks like it came from a funded agency, built at a speed and price that doesn't."
+                "I don't just build websites. I build products, create opportunities, and help others become builders."
               </p>
             </div>
 

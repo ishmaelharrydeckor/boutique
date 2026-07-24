@@ -15,7 +15,7 @@ export const projects: Project[] = [
   {
     slug: "ember-and-oak",
     name: "Ember & Oak",
-    url: "https://ember-and-oak.vercel.app/",
+    url: "https://restaurant-pi-lemon.vercel.app/",
     category: "Hospitality / Visual Showcase",
     summary: "A premium, moody visual showcase and scroll-scrubbed interactive landing experience built for a high-end fictional fine-dining restaurant.",
     problem: "Hospitality websites often look generic and fail to communicate the premium craftsmanship, mood, and unhurried pacing of an upscale dining brand.",

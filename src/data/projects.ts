@@ -13,6 +13,18 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    slug: "ember-and-oak",
+    name: "Ember & Oak",
+    url: "https://ember-and-oak.vercel.app/",
+    category: "Hospitality / Visual Showcase",
+    summary: "A premium, moody visual showcase and scroll-scrubbed interactive landing experience built for a high-end fictional fine-dining restaurant.",
+    problem: "Hospitality websites often look generic and fail to communicate the premium craftsmanship, mood, and unhurried pacing of an upscale dining brand.",
+    approach: "Crafted a dark, high-contrast serif design system paired with an Apple-style scroll-scrubbed hero using preloaded image sequences rendered on a canvas for stutter-free performance.",
+    outcome: "Delivered a luxurious, Michelin-caliber site with simulated reservations, a masonry atmosphere gallery, and smooth scroll animations.",
+    techStack: ["Next.js", "Tailwind CSS", "TypeScript", "GSAP"],
+    isFeatured: true
+  },
+  {
     slug: "real-estate-catalog",
     name: "Real Estate Catalog",
     url: "https://real-estate-jade-nine.vercel.app/",

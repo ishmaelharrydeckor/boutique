@@ -78,10 +78,11 @@ group them naturally.
 4. **Animation check**: run `find-animation-opportunities`, 
    then `review-animations` — fix findings from both.
 5. **Mobile review**: run the `mobile-responsive-review` skill.
-6. **If any real backend/database is involved**: run the 
+6. **Performance check**: run the `performance-optimization` skill.
+7. **If any real backend/database is involved**: run the 
    `backend-security-checklist` skill. Do not skip this even 
    if the backend seems simple.
-7. Confirm zero console errors via `npm run dev` and manual 
+8. Confirm zero console errors via `npm run dev` and manual 
    check before reporting anything as "done."
 
 ## Step 5: Wrap-Up

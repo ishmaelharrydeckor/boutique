@@ -61,15 +61,14 @@ function CrystalPrism() {
         <octahedronGeometry args={[1.6, 0]} />
         <meshPhysicalMaterial
           color="#10b981"
-          emissive="#064e3b"
-          emissiveIntensity={0.4}
-          roughness={0.1}
-          metalness={0.1}
+          emissive="#042f22"
+          emissiveIntensity={0.5}
+          roughness={0.15}
+          metalness={0.2}
           clearcoat={1.0}
           clearcoatRoughness={0.1}
-          transmission={0.6}
-          thickness={1.5}
-          ior={1.5}
+          transparent={true}
+          opacity={0.7}
           flatShading={true}
         />
       </mesh>

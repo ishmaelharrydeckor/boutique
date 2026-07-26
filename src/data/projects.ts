@@ -167,5 +167,17 @@ export const projects: Project[] = [
     outcome: "Enabled traders to diagnose their strategies and view AI-assisted insights based on actual transaction histories.",
     techStack: ["Next.js", "Tailwind CSS", "Recharts", "TypeScript", "Framer Motion"],
     isFeatured: true
+  },
+  {
+    slug: "aether-studio",
+    name: "AETHER Studio",
+    url: "/",
+    category: "Creative Tech Agency",
+    summary: "An experimental boutique creative tech agency website featuring interactive 3D rendering and scroll animations.",
+    problem: "Most agency portfolios are structurally cluttered or over-animated, creating a sluggish user experience and weak typographic contrast.",
+    approach: "Designed a minimal, high-contrast typography system built on Next.js, and paired it with a single floating 3D crystalline prism using React Three Fiber.",
+    outcome: "Achieved a lightweight, responsive one-pager with smooth GSAP scroll triggers and tactile interaction states.",
+    techStack: ["Next.js", "React Three Fiber", "GSAP", "TypeScript"],
+    isFeatured: true
   }
 ];

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Outfit } from "next/font/google";
+import { Inter, Syne } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -9,29 +9,20 @@ const inter = Inter({
   subsets: ["latin"],
 });
 
-const outfit = Outfit({
+const syne = Syne({
   variable: "--font-display",
   subsets: ["latin"],
+  weight: ["700", "800"],
 });
 
 export const metadata: Metadata = {
-  title: {
-    default: "Ishmael Harry-Deckor | AI-Accelerated Frontend Developer",
-    template: "%s | Ishmael Harry-Deckor"
-  },
-  description: "Ishmael Harry-Deckor builds fast, premium websites by combining serious technical training with AI as a genuine engineering tool.",
+  title: "AETHER Studio — Boutique Creative & Tech Agency",
+  description: "An experimental creative studio crafting premium, hyper-polished web experiences with technical mastery.",
   openGraph: {
-    title: "Ishmael Harry-Deckor | AI-Accelerated Frontend Developer",
-    description: "Sleek, high-converting websites built at agency standards with AI speed and engineering precision.",
-    url: "https://ishmaelharrydeckor.dev",
-    siteName: "Ishmael Harry-Deckor Portfolio",
+    title: "AETHER Studio — Boutique Creative & Tech Agency",
+    description: "An experimental creative studio crafting premium, hyper-polished web experiences with technical mastery.",
     type: "website",
   },
-  twitter: {
-    card: "summary_large_image",
-    title: "Ishmael Harry-Deckor | AI-Accelerated Frontend Developer",
-    description: "Sleek, high-converting websites built at agency standards with AI speed and engineering precision.",
-  }
 };
 
 export default function RootLayout({
@@ -42,7 +33,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${outfit.variable} h-full antialiased dark`}
+      className={`${inter.variable} ${syne.variable} h-full antialiased dark`}
     >
       <body className="min-h-full flex flex-col bg-background text-foreground selection:bg-accent/20">
         <Header />

@@ -1,22 +1,23 @@
 @import "tailwindcss";
 
 @theme {
-  --color-background: #050505;
-  --color-surface: #0d0d0e;
-  --color-surface-muted: #161618;
-  --color-foreground: #f4f4f5;
-  --color-foreground-muted: #a1a1aa;
+  --color-background: #040405;
+  --color-surface: #0b0b0c;
+  --color-surface-muted: #121214;
+  --color-foreground: #ffffff;
+  --color-foreground-muted: #8e8e93;
   
-  --color-accent: #d4a527;
-  --color-accent-glow: rgba(212, 165, 39, 0.15);
+  --color-accent: #10b981;
+  --color-accent-glow: rgba(16, 185, 129, 0.12);
   
   --font-sans: var(--font-sans), sans-serif;
   --font-display: var(--font-display), sans-serif;
 }
 
 :root {
-  --background: #050505;
-  --foreground: #f4f4f5;
+  --background: #040405;
+  --foreground: #ffffff;
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 body {
@@ -31,23 +32,53 @@ body {
   width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #050505;
+  background: #040405;
 }
 ::-webkit-scrollbar-thumb {
-  background: #1c1c1e;
+  background: #121214;
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #d4a527;
+  background: #10b981;
 }
 
 /* Selection color */
 ::selection {
-  background-color: rgba(212, 165, 39, 0.2);
-  color: #f4f4f5;
+  background-color: rgba(16, 185, 129, 0.2);
+  color: #ffffff;
 }
 
 /* Smooth scrolling */
 html {
   scroll-behavior: smooth;
+}
+
+/* 1. Global Tactical Active Press Feedback */
+a, button, [role="button"] {
+  transition: transform 160ms var(--ease-out), background-color 160ms ease, border-color 160ms ease, box-shadow 160ms ease;
+}
+
+a:active, button:active, [role="button"]:active {
+  transform: scale(0.97) !important;
+}
+
+/* 2. Responsive Hover Gating to prevent sticky hovers on touch devices */
+@media (hover: hover) and (pointer: fine) {
+  .hover-scale {
+    transition: transform 200ms var(--ease-out);
+  }
+  .hover-scale:hover {
+    transform: scale(1.02);
+  }
+  
+  .hover-glow:hover {
+    box-shadow: 0 0 20px rgba(16, 185, 129, 0.2);
+  }
+  
+  .hover-border {
+    transition: border-color 200ms ease;
+  }
+  .hover-border:hover {
+    border-color: rgba(16, 185, 129, 0.25) !important;
+  }
 }

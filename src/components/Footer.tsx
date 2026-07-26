@@ -2,30 +2,30 @@ import Link from "next/link";
 
 export default function Footer() {
   const links = [
-    { name: "Home", href: "/" },
-    { name: "Projects", href: "/projects" },
-    { name: "About", href: "/about" },
-    { name: "Contact", href: "/contact" },
+    { name: "SERVICES", href: "#services" },
+    { name: "WORK", href: "#work" },
+    { name: "APPROACH", href: "#approach" },
+    { name: "CONTACT", href: "#contact" },
   ];
 
   const socialLinks = [
     { name: "GitHub", href: "https://github.com/ishmaelharrydeckor", handle: "@ishmaelharrydeckor" },
     { name: "LinkedIn", href: "https://www.linkedin.com/in/ishmaelharrydeckor", handle: "@ishmaelharrydeckor" },
     { name: "Twitter", href: "https://x.com/DeckorHarry", handle: "@DeckorHarry" },
-    { name: "Email", href: "mailto:ishmaelharrydeckor@gmail.com", handle: "ishmaelharrydeckor@gmail.com" },
+    { name: "Email", href: "mailto:hello@aether.studio", handle: "hello@aether.studio" },
   ];
 
   return (
-    <footer className="border-t border-zinc-800/60 bg-[#050505] py-16 mt-auto">
+    <footer className="border-t border-zinc-900 bg-background py-16 mt-auto">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-12">
           {/* Brand */}
           <div className="flex flex-col gap-4 max-w-xs">
-            <Link href="/" className="font-display font-semibold tracking-wider text-foreground text-md">
-              ISHMAEL HARRY-DECKOR
+            <Link href="#hero" className="font-display font-semibold tracking-widest text-foreground text-md uppercase">
+              AETHER
             </Link>
-            <p className="text-sm text-foreground-muted leading-relaxed">
-              AI-accelerated frontend builder. Building premium, production-ready web experiences at lightspeed.
+            <p className="text-xs text-foreground-muted leading-relaxed">
+              Boutique creative tech studio crafting premium, hyper-polished web experiences with technical mastery.
             </p>
           </div>
 
@@ -38,7 +38,7 @@ export default function Footer() {
                   <li key={link.name}>
                     <Link
                       href={link.href}
-                      className="text-sm text-foreground-muted hover:text-accent transition-colors duration-200"
+                      className="text-xs text-foreground-muted hover:text-accent transition-colors duration-200"
                     >
                       {link.name}
                     </Link>
@@ -56,7 +56,7 @@ export default function Footer() {
                       href={social.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-sm text-foreground-muted hover:text-accent transition-colors duration-200"
+                      className="text-xs text-foreground-muted hover:text-accent transition-colors duration-200"
                     >
                       <span className="text-foreground">{social.name}:</span> {social.handle}
                     </a>
@@ -69,9 +69,9 @@ export default function Footer() {
 
         {/* Bottom copyright */}
         <div className="mt-12 pt-8 border-t border-zinc-900 flex flex-col sm:flex-row sm:justify-between items-center gap-4 text-xs text-foreground-muted">
-          <p>© {new Date().getFullYear()} Ishmael Harry-Deckor. All rights reserved.</p>
-          <p className="flex items-center gap-1.5">
-            Designed & Built with <span className="text-accent">●</span> AI Acceleration
+          <p>© {new Date().getFullYear()} AETHER. All rights reserved.</p>
+          <p className="flex items-center gap-1.5 font-mono">
+            DESIGNED & BUILT BY AETHER STUDIO
           </p>
         </div>
       </div>

@@ -7,8 +7,7 @@ import * as THREE from "three";
 function CrystalPrism() {
   const meshRef = useRef<THREE.Mesh>(null);
   const wireframeRef = useRef<THREE.Mesh>(null);
-  const [mouse, setMouse] = useState({ x: 0, y: 0 });
-  const [scrollY, setScrollY] = useState(0);
+  const mouseRef = useRef({ x: 0, y: 0 });
   const targetRotation = useRef({ x: 0, y: 0 });
   const { width } = useThree().viewport;
   
@@ -19,20 +18,14 @@ function CrystalPrism() {
 
   useEffect(() => {
     const handleMouseMove = (event: MouseEvent) => {
-      // Normalize mouse coords (-1 to 1)
-      setMouse({
+      mouseRef.current = {
         x: (event.clientX / window.innerWidth) * 2 - 1,
         y: -(event.clientY / window.innerHeight) * 2 + 1,
-      });
+      };
     };
-    const handleScroll = () => {
-      setScrollY(window.scrollY);
-    };
-    window.addEventListener("mousemove", handleMouseMove);
-    window.addEventListener("scroll", handleScroll, { passive: true });
+    window.addEventListener("mousemove", handleMouseMove, { passive: true });
     return () => {
       window.removeEventListener("mousemove", handleMouseMove);
-      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
@@ -40,14 +33,15 @@ function CrystalPrism() {
     if (!meshRef.current || !wireframeRef.current) return;
 
     const time = state.clock.getElapsedTime();
+    const scrollY = typeof window !== "undefined" ? window.scrollY : 0;
 
     // Gentle floating translation (Y-axis)
     meshRef.current.position.y = position[1] + Math.sin(time * 0.5) * 0.2;
     wireframeRef.current.position.y = position[1] + Math.sin(time * 0.5) * 0.2;
 
     // Mouse follow rotation (spring interpolation)
-    targetRotation.current.x = mouse.y * 0.4;
-    targetRotation.current.y = mouse.x * 0.4;
+    targetRotation.current.x = mouseRef.current.y * 0.4;
+    targetRotation.current.y = mouseRef.current.x * 0.4;
 
     // Combine floating, mouse-move, and scroll-induced rotation
     const scrollFactor = scrollY * 0.002;

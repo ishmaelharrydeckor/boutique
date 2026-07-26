@@ -87,9 +87,7 @@ group them naturally.
 
 ## Step 5: Wrap-Up
 
-1. If this is a portfolio piece: ask the user if it should be 
-   added to `data/projects.ts` in the main portfolio site, and 
-   with what category tag.
+1. Run the `portfolio-add` skill to handle post-project check and portfolio inclusion.
 2. If a repo destination was given, commit and push all code 
    there.
 3. Write/update the README for the project documenting the 

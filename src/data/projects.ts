@@ -179,5 +179,17 @@ export const projects: Project[] = [
     outcome: "Achieved a lightweight, responsive one-pager with smooth GSAP scroll triggers and tactile interaction states.",
     techStack: ["Next.js", "React Three Fiber", "GSAP", "TypeScript"],
     isFeatured: true
+  },
+  {
+    slug: "aura-audio",
+    name: "AURA Audio",
+    url: "https://aura-audio.vercel.app/",
+    category: "Product / 3D Visualization",
+    summary: "A premium Scandinavian product launch page featuring interactive 3D product rendering and AI-generated ambient video integration.",
+    problem: "Traditional product landing pages rely on heavy static image carousels that fail to communicate the physical shape, material, and ambient mood of premium consumer hardware.",
+    approach: "Designed a clean Scandinavian light-mode page, integrated an interactive 3D speaker column with custom OrbitControls, and paired it with a looping AI-generated ambient soundwave video.",
+    outcome: "Created a high-fidelity, Apple-quality product launch page with hardware-accelerated animations and buttery smooth scrolling.",
+    techStack: ["Next.js", "React Three Fiber", "GSAP", "TypeScript", "Higgsfield AI"],
+    isFeatured: true
   }
 ];

@@ -18,10 +18,8 @@ if (typeof window !== "undefined") {
 export default function Home() {
   const containerRef = useRef<HTMLDivElement>(null);
 
-  // Restrict to 3 featured projects for a tight grid
-  const featuredProjects = projects
-    .filter((p) => p.isFeatured)
-    .slice(0, 3);
+  // Restrict to featured projects
+  const featuredProjects = projects.filter((p) => p.isFeatured);
 
   useGSAP(
     () => {

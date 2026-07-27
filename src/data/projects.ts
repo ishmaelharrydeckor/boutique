@@ -58,7 +58,7 @@ export const projects: Project[] = [
     approach: "Structured a dashboard layout with visual milestone tracking, clear course categorizations, and smooth navigation animations using Framer Motion.",
     outcome: "Delivered an appealing educational dashboard that visualizes course progression cleanly, encouraging students to stay on track.",
     techStack: ["Next.js", "Tailwind CSS", "TypeScript", "Framer Motion"],
-    isFeatured: true
+    isFeatured: false
   },
   {
     slug: "sena-waitlist",
@@ -94,7 +94,7 @@ export const projects: Project[] = [
     approach: "Engineered a grid-based dashboard with modular card displays, dynamic charts, and asynchronous status queries.",
     outcome: "Provided administrators with a central control panel that summarizes sales figures and user growth in real-time.",
     techStack: ["React", "Tailwind CSS", "Recharts", "TypeScript"],
-    isFeatured: true
+    isFeatured: false
   },
   {
     slug: "ksp",
@@ -166,7 +166,7 @@ export const projects: Project[] = [
     approach: "Engineered a professional dashboard displaying key performance metrics (Win Rate, Profit Factor, Net P&L) using custom charts and real-time feed updates.",
     outcome: "Enabled traders to diagnose their strategies and view AI-assisted insights based on actual transaction histories.",
     techStack: ["Next.js", "Tailwind CSS", "Recharts", "TypeScript", "Framer Motion"],
-    isFeatured: true
+    isFeatured: false
   },
   {
     slug: "aether-studio",
@@ -202,6 +202,6 @@ export const projects: Project[] = [
     approach: "Engineered a dynamic athletic brand interface featuring bold italics, high-contrast toxic lime highlights, and interactive scheduling grids.",
     outcome: "Created a powerful studio landing experience that drives visitor bookings for free metabolic conditioning and Olympic lifting trial passes.",
     techStack: ["Next.js", "Tailwind CSS", "TypeScript", "GSAP"],
-    isFeatured: false
+    isFeatured: true
   }
 ];

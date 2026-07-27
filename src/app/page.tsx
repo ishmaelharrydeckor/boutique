@@ -193,9 +193,12 @@ export default function Home() {
 
           <div className="stagger-container grid grid-cols-1 md:grid-cols-3 gap-8">
             {featuredProjects.map((project) => (
-              <div
+              <Link
                 key={project.slug}
-                className="stagger-item group relative overflow-hidden rounded-lg border border-zinc-900 bg-surface hover-border transition-all duration-300 flex flex-col h-full"
+                href={`/projects/${project.slug}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="stagger-item group relative overflow-hidden rounded-lg border border-zinc-900 bg-surface hover-border transition-all duration-300 flex flex-col h-full cursor-pointer"
               >
                 {/* Visual Representation */}
                 <div className="relative aspect-[16/10] w-full overflow-hidden border-b border-zinc-900 bg-zinc-950">
@@ -227,12 +230,12 @@ export default function Home() {
                   </p>
                   <div className="mt-6 pt-6 border-t border-zinc-900 flex items-center justify-between">
                     <span className="group-hover:text-accent text-xs font-semibold flex items-center gap-1 transition-colors">
-                      CASE STUDY COMING SOON
+                      VIEW LIVE DEMO
                       <ArrowUpRight className="h-3 w-3 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                     </span>
                   </div>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </div>

@@ -124,7 +124,7 @@ export default function ContactPage() {
                   Location & Timeline
                 </h3>
                 <p className="text-sm text-foreground-muted">
-                  Accra, Ghana & Remote (GMT). Active project capacity available. Typical response time is under 12 hours.
+                  Kumasi, Ghana & Remote (GMT). Active project capacity available. Typical response time is under 12 hours.
                 </p>
               </div>
 
